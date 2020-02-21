@@ -42,24 +42,24 @@ public class thsWyyxIM extends CordovaPlugin {
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
-        requestPermissions();
+       // requestPermissions();
         Log.e(TAG,"initialize");
     }
 
-    @TargetApi(23)
-    private void requestPermissions() {
-        PermissionsManager.getInstance().requestAllManifestPermissionsIfNecessary(cordova.getActivity(), new PermissionsResultAction() {
-            @Override
-            public void onGranted() {
-//				Toast.makeText(MainActivity.this, "All permissions have been granted", Toast.LENGTH_SHORT).show();
-            }
+//     @TargetApi(23)
+//     private void requestPermissions() {
+//         PermissionsManager.getInstance().requestAllManifestPermissionsIfNecessary(cordova.getActivity(), new PermissionsResultAction() {
+//             @Override
+//             public void onGranted() {
+// //				Toast.makeText(MainActivity.this, "All permissions have been granted", Toast.LENGTH_SHORT).show();
+//             }
 
-            @Override
-            public void onDenied(String permission) {
-                //Toast.makeText(MainActivity.this, "Permission " + permission + " has been denied", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+//             @Override
+//             public void onDenied(String permission) {
+//                 //Toast.makeText(MainActivity.this, "Permission " + permission + " has been denied", Toast.LENGTH_SHORT).show();
+//             }
+//         });
+//     }
     
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -78,6 +78,12 @@ public class thsWyyxIM extends CordovaPlugin {
         //    boolean isLoggedIn = DemoHelper.getInstance().isLoggedIn();
         //     callbackContext.success(isLoggedIn+"");
             return true;
+        }else if(action.equals("enterRoom")){
+
+            return true;
+        }else if(action.equals("createChannel")){
+            
+            return true;
         }
         return false;
     }
@@ -86,6 +92,7 @@ public class thsWyyxIM extends CordovaPlugin {
      * 退出登录
      */
     private  void logout(CallbackContext callbackContext){
+
         callbackContext.success("success");
     }
     /**

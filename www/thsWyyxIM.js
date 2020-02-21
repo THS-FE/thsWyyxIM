@@ -15,11 +15,26 @@ exports.logout = function ( success, error) {
     exec(success, error, 'thsWyyxIM', 'logout', []);
 };
 
+
 /**
  * 获取登录状态
  */
 exports.isLoggedIn  = function (success, error) {
     exec(success, error, 'thsWyyxIM', 'isLoggedIn', []);
+};
+
+/**
+ * 进入房间
+ */
+exports.enterRoom  = function (roomid,success, error) {
+    exec(success, error, 'thsWyyxIM', 'enterRoom', [roomid]);
+};
+
+/**
+ * 创建频道并进入房间
+ */
+exports.createChannel  = function (roomid,success, error) {
+    exec(success, error, 'thsWyyxIM', 'createChannel', [roomid]);
 };
 
 
