@@ -17,7 +17,7 @@ exports.logout = function ( success, error) {
 
 
 /**
- * 获取登录状态
+ * 获取登录状态,暂不可用
  */
 exports.isLoggedIn  = function (success, error) {
     exec(success, error, 'thsWyyxIM', 'isLoggedIn', []);
@@ -35,6 +35,13 @@ exports.enterRoom  = function (roomid,success, error) {
  */
 exports.createChannel  = function (roomid,success, error) {
     exec(success, error, 'thsWyyxIM', 'createChannel', [roomid]);
+};
+
+/**
+ * 创建用户
+ */
+exports.createUser  = function (account,nickName,password,success, error) {
+    exec(success, error, 'thsWyyxIM', 'createUser', [account,nickName,password]);
 };
 
 

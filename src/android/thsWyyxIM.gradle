@@ -9,7 +9,7 @@ ext.supportLibVersion = '27.+'
 ext.kotlin_version = '1.2.71'
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    implementation(name: "thsWyyxIM", ext: 'aar')
+    api(name: "thsWyyxIM", ext: 'aar')
 
     implementation 'com.android.support:appcompat-v7:${supportLibVersion}'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
